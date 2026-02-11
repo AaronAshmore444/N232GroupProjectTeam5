@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4568931385576950977}
   m_Layer: 0
   m_Name: Barrel
-  m_TagString: Player
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 4044783066697846134}
   m_Layer: 0
   m_Name: Trigger
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -264,7 +264,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1848159478895686269, guid: c25d6744161175144be30ba6e3ae607e, type: 3}
-  firePoint: {fileID: 0}
 --- !u!1 &8806232407928916985
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,7 +275,7 @@ GameObject:
   - component: {fileID: 5143852948789154243}
   m_Layer: 0
   m_Name: FirePoint
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -4,16 +4,12 @@ public class GunManager : MonoBehaviour
 {
 
     public GameObject bullet;
-    public Transform firePoint;
-
-    private void Awake()
-    {
-        
-    }
+    private Transform firePoint;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        firePoint = GameObject.Find("FirePoint").transform;
     }
 
     // Update is called once per frame
