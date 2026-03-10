@@ -94,11 +94,23 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {   
+        Debug.Log("Hit: " + collision.gameObject.tag);
         //If player is touching the ground plane, then enable jump
         if (collision.gameObject.CompareTag("Ground"))
         {
             OnGround = true;
         }
+
+         
+        
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            
+            Destroy(gameObject);
+        }
+    
+        
+    
     }
 
     void OnCollisionExit(Collision collision)

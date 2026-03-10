@@ -48,7 +48,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   aliveTime: 3
-  gunTransform: {fileID: 6085388227762061659, guid: 0358fb0ffc972dd499e0cac52d9f6e8f, type: 3}
 --- !u!54 &7810915352595418267
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -90,7 +89,7 @@ GameObject:
   - component: {fileID: 1394274221014083687}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,8 +104,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.080761, y: 0.080761, z: 0.080761}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4774112696062042105}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
