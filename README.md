@@ -10,7 +10,7 @@ DaRon Torrence - Was in charge of enemies, but did not contribute or communicate
 Notable Practices - We kept our work testing in Prefabs and Scenes before merging it all into the Level 1 scene when completed.
 
 What is working - Player Controller, Coin Pickup and Scoring, Gun Bullets, some UI, Basic Enemy, Trap spawn, Player death, Enemy death, 
-Controls - Shift to sprint, Left Mouse to shoot, F to spawn trap, R to restart level, WASD and arrow keys to move.
+Controls - Shift to sprint, Left Mouse to shoot, F to spawn trap, R to restart level, WASD and arrow keys to move, Spacebar jumps
 
 What is not working - UI is not linked to each UI scene all the way, Enemy shouldn't attack immediatly, player spins out of control randomly
 
