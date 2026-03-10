@@ -191,6 +191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7786944739295004967, guid: f897d0bf1f819874ca5e6865adbcd64f, type: 3}
+      propertyPath: coinText
+      value: 
+      objectReference: {fileID: 491592208}
     - target: {fileID: 8670802615801195303, guid: f897d0bf1f819874ca5e6865adbcd64f, type: 3}
       propertyPath: moveSpeed
       value: 5
@@ -262,6 +266,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbdff592b79a0334786d3f64cfd1ca4c, type: 3}
+--- !u!114 &491592208 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6016050976215644772, guid: 4a508304b6af07f498b92f2966ea687b, type: 3}
+  m_PrefabInstance: {fileID: 1246548303}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &584753878
 GameObject:
   m_ObjectHideFlags: 0
