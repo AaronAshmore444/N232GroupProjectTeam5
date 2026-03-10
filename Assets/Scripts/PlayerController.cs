@@ -1,3 +1,4 @@
+using UnityEditor.SearchService;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -72,11 +73,11 @@ public class PlayerController : MonoBehaviour
         {
             rb.linearVelocity *= 2f;
         }
-
+        // If F is pressed, player throws the Trap
         if (Input.GetKeyDown(KeyCode.F) && gadgetToThrow != null)   {
             ThrowGadget();
     }
-
+        //Code to spawn and throw the trap, then doesnt allow another to be thrown
     void ThrowGadget()
         {
             GameObject thrownGadget = Instantiate(gadgetToThrow, throwPoint.position, throwPoint.rotation);
@@ -94,7 +95,7 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {   
-        Debug.Log("Hit: " + collision.gameObject.tag);
+        
         //If player is touching the ground plane, then enable jump
         if (collision.gameObject.CompareTag("Ground"))
         {
@@ -102,11 +103,13 @@ public class PlayerController : MonoBehaviour
         }
 
          
-        
+        //If enemy touches player, player dies 
         if (collision.gameObject.CompareTag("Enemy"))
         {
             
             Destroy(gameObject);
+
+            
         }
     
         
