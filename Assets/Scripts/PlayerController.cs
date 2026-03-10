@@ -1,5 +1,6 @@
 using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -37,7 +38,10 @@ public class PlayerController : MonoBehaviour
             doJump = true;
         }
 
-
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
 
     }
 
@@ -77,6 +81,9 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && gadgetToThrow != null)   {
             ThrowGadget();
     }
+
+        
+
         //Code to spawn and throw the trap, then doesnt allow another to be thrown
     void ThrowGadget()
         {
@@ -108,6 +115,7 @@ public class PlayerController : MonoBehaviour
         {
             
             Destroy(gameObject);
+            //SceneManager.LoadScene(2);
 
             
         }
