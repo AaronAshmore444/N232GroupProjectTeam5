@@ -26,9 +26,6 @@ public class EnemyMovement : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (other.CompareTag("Bullet"))
-        {
-            Destroy(gameObject);
-        }
+        
     }
 }
