@@ -10,7 +10,7 @@ Emily Cabrera - Level Design, Coins and Scoring
 
 Abhinoor Singh - Gun, Bullets, UI
 
-DaRon Torrence - Was in charge of enemies, but did not contribute or communicate this Milestone
+DaRon Torrence - Worked on health and damage scripts
 
 Notable Practices - We kept our work testing in Prefabs and Scenes before merging it all into the Level 1 scene when completed.
 
