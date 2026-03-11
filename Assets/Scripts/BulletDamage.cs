@@ -1,5 +1,6 @@
 using UnityEngine;
 
+public class BulletDamage : MonoBehaviour
 {
     public float speed = 20f;
     public float aliveTime = 3f;
