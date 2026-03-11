@@ -10,7 +10,7 @@ Emily Cabrera - Level Design, Coins and Scoring
 
 Abhinoor Singh - Gun, Bullets, UI
 
-DaRon Torrence - Worked on health and damage scripts
+DaRon Torrence - Worked on health and damage script from bullets for the enemies
 
 Notable Practices - We kept our work testing in Prefabs and Scenes before merging it all into the Level 1 scene when completed.
 
