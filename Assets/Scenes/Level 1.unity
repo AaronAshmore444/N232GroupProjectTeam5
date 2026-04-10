@@ -414,10 +414,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Setting
       objectReference: {fileID: 0}
-    - target: {fileID: 5627213738208160279, guid: 4a508304b6af07f498b92f2966ea687b, type: 3}
-      propertyPath: m_TagString
-      value: Ground
-      objectReference: {fileID: 0}
     - target: {fileID: 7892124376080396915, guid: 4a508304b6af07f498b92f2966ea687b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.41012573
@@ -461,30 +457,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9129687457218191937, guid: 4a508304b6af07f498b92f2966ea687b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1969126863}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a508304b6af07f498b92f2966ea687b, type: 3}
---- !u!1 &1969126858 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9129687457218191937, guid: 4a508304b6af07f498b92f2966ea687b, type: 3}
-  m_PrefabInstance: {fileID: 1246548303}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1969126863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1969126858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e68dc2d7354b394c8a21de5649da038, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinsCollected: 0
-  coinText: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
