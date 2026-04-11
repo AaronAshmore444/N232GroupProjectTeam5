@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4146347612388832862}
   - component: {fileID: 7786944739295004967}
   - component: {fileID: 2321480917923220953}
+  - component: {fileID: 5038930866292567815}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -36,7 +37,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6616604398660591814}
-  - {fileID: 1803849657849526877}
   m_Father: {fileID: 4760062587664980234}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4760181731650002229
@@ -138,6 +138,9 @@ MonoBehaviour:
   throwPoint: {fileID: 1803849657849526877}
   throwForce: 10
   gadgetToThrow: {fileID: 9185836432109937730, guid: 24632f450d1868a4884663c9df54976c, type: 3}
+  hasGadget: 0
+  currentGadget: {fileID: 0}
+  pickupTrapText: {fileID: 0}
 --- !u!114 &7786944739295004967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +180,19 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5038930866292567815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056025282518407388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0441b26bfe10a47eab838e1c7c2f3035, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingHealth: 100
 --- !u!1 &3985790264303059621
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,12 +249,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4960926571467979213}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.73, z: 2}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.05, y: 0.20999998, z: 1.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4097775095841843994}
+  m_Father: {fileID: 5219426704626732212}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4967268729609261317
 GameObject:
@@ -274,6 +290,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2187586902211768509}
+  - {fileID: 1803849657849526877}
   m_Father: {fileID: 6616604398660591814}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &1901525496362661165
