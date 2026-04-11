@@ -17962,7 +17962,6 @@ GameObject:
   - component: {fileID: 2210789574184896811}
   - component: {fileID: 5918409053936110623}
   - component: {fileID: 250215755465495666}
-  - component: {fileID: 1997396715125129697}
   m_Layer: 5
   m_Name: enemyText
   m_TagString: Untagged
@@ -18088,19 +18087,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &1997396715125129697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7811086929986242823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 928f69b75daff28458fb46d719cdb124, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointsValue: 1
 --- !u!1 &7829107175170266057
 GameObject:
   m_ObjectHideFlags: 0
