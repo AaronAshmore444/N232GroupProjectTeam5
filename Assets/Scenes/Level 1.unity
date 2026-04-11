@@ -195,6 +195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7185146571133197527, guid: f897d0bf1f819874ca5e6865adbcd64f, type: 3}
+      propertyPath: cameraRotationSpeed
+      value: 480
+      objectReference: {fileID: 0}
     - target: {fileID: 7786944739295004967, guid: f897d0bf1f819874ca5e6865adbcd64f, type: 3}
       propertyPath: coinText
       value: 
