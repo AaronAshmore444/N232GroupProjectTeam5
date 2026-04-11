@@ -27,11 +27,17 @@ public class PlayerController : MonoBehaviour
     //Gadget to Throw
     public GameObject gadgetToThrow;
 
+    public bool hasGadget;
+
+    
+
+    public GameObject currentGadget;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
-        
+        hasGadget = true;
     }
     // Update is called once per frame
     void Update()
@@ -82,20 +88,34 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        
+        // If F is pressed, player throws the Trap
+        if (Input.GetKeyDown(KeyCode.F)) {
+         
+            if (hasGadget)
+            {
+                ThrowGadget();
+            }
+        
+            if (currentGadget != null)
+            {
+               
+                
+                 Destroy(currentGadget);
+                currentGadget = null;
+                hasGadget = true;
+
+                
+                
+            }
 
     }
 
 
-    void FixedUpdate()
-    { 
-      
-        // If F is pressed, player throws the Trap
-        if (Input.GetKeyDown(KeyCode.F) && gadgetToThrow != null)
-        {
-            ThrowGadget();
-        }
+    
 
-
+        
+        
 
         //Code to spawn and throw the trap, then doesnt allow another to be thrown
         void ThrowGadget()
@@ -108,8 +128,10 @@ public class PlayerController : MonoBehaviour
                 rb.AddForce(throwPoint.forward * throwForce, ForceMode.VelocityChange);
             }
 
-            gadgetToThrow = null;
+            hasGadget = false;
         }
+
+       
 
     }
 
@@ -128,7 +150,7 @@ public class PlayerController : MonoBehaviour
 
         }
 
-
+        
 
     }
 
