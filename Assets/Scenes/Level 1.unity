@@ -179,13 +179,14 @@ PrefabInstance:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 873790872}
+    - target: {fileID: 9197673851564091789, guid: f897d0bf1f819874ca5e6865adbcd64f, type: 3}
+      propertyPath: coinText
+      value: 
+      objectReference: {fileID: 491592208}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2056025282518407388, guid: f897d0bf1f819874ca5e6865adbcd64f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1334235668}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f897d0bf1f819874ca5e6865adbcd64f, type: 3}
 --- !u!1001 &403153458
 PrefabInstance:
@@ -242,10 +243,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3480659846517043156, guid: cbdff592b79a0334786d3f64cfd1ca4c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 896851062}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbdff592b79a0334786d3f64cfd1ca4c, type: 3}
 --- !u!114 &491592208 stripped
 MonoBehaviour:
@@ -390,24 +388,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &896851056 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3480659846517043156, guid: cbdff592b79a0334786d3f64cfd1ca4c, type: 3}
-  m_PrefabInstance: {fileID: 403153458}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &896851062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896851056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 928f69b75daff28458fb46d719cdb124, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointsValue: 10
 --- !u!1 &997476276 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3719949618606466477, guid: 4a508304b6af07f498b92f2966ea687b, type: 3}
@@ -468,59 +448,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5088727329783460596, guid: 4a508304b6af07f498b92f2966ea687b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1966620343}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a508304b6af07f498b92f2966ea687b, type: 3}
---- !u!1 &1334235660 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2056025282518407388, guid: f897d0bf1f819874ca5e6865adbcd64f, type: 3}
-  m_PrefabInstance: {fileID: 217933831}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1334235668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1334235660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e68dc2d7354b394c8a21de5649da038, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinsCollected: 0
-  coinText: {fileID: 491592208}
---- !u!114 &1447770779 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 250215755465495666, guid: 4a508304b6af07f498b92f2966ea687b, type: 3}
-  m_PrefabInstance: {fileID: 1246548303}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &1966620339 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5088727329783460596, guid: 4a508304b6af07f498b92f2966ea687b, type: 3}
-  m_PrefabInstance: {fileID: 1246548303}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1966620343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966620339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3684ade4c946e244e83e62e0fec9e403, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 1447770779}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

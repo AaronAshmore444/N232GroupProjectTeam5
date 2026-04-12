@@ -11150,6 +11150,7 @@ GameObject:
   - component: {fileID: 5197022997622736842}
   - component: {fileID: 3327188198110301226}
   - component: {fileID: 3067494433979200542}
+  - component: {fileID: 5881677386810065096}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -11200,6 +11201,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsValue: 10
+--- !u!114 &5881677386810065096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5088727329783460596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3684ade4c946e244e83e62e0fec9e403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 250215755465495666}
 --- !u!1 &5093973458101037253
 GameObject:
   m_ObjectHideFlags: 0
@@ -16228,6 +16242,7 @@ GameObject:
   - component: {fileID: 2210789574184896811}
   - component: {fileID: 5918409053936110623}
   - component: {fileID: 250215755465495666}
+  - component: {fileID: 32720099396738687}
   m_Layer: 5
   m_Name: enemyText
   m_TagString: Untagged
@@ -16353,6 +16368,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &32720099396738687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7811086929986242823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3684ade4c946e244e83e62e0fec9e403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 250215755465495666}
 --- !u!1 &7831809985101487143
 GameObject:
   m_ObjectHideFlags: 0
