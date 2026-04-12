@@ -4,7 +4,7 @@ public class BulletDamage : MonoBehaviour
 {
     public float speed = 20f;
     public float aliveTime = 3f;
-    public float damageAmount = 25f;
+    public float damageAmount = 25;
 
     void Start()
     {
@@ -20,11 +20,9 @@ public class BulletDamage : MonoBehaviour
 
         // Apply damage if the object has HealthPoints
         HealthPoints health = other.GetComponent<HealthPoints>();
-
-        if (health != null)
-        {
-            health.CurrentHealth -= damageAmount;
-        }
+        Enemy enemy = other.GetComponent<Enemy>();
+        if (enemy != null) enemy.TakeDamage(damageAmount);
+        
 
         Destroy(gameObject);
     }

@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     }
 
     // Example method to simulate taking damage
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         // For simplicity, we destroy the enemy when any damage is taken
         Die();
@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
         if (gameManager != null)
         {
             gameManager.AddPoints(pointsValue);
+            Debug.Log(pointsValue);
         }
         Destroy(gameObject);
     }
