@@ -18,10 +18,7 @@ public class BulletDamage : MonoBehaviour
 
         if (other.tag == "Player" || other.tag == "Gun") return;
 
-        // Apply damage if the object has HealthPoints
-        HealthPoints health = other.GetComponent<HealthPoints>();
-        Enemy enemy = other.GetComponent<Enemy>();
-        if (enemy != null) enemy.TakeDamage(damageAmount);
+        
         
 
         Destroy(gameObject);

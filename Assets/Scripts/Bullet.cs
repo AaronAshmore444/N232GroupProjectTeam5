@@ -18,6 +18,7 @@ public class Bullet : MonoBehaviour
         Debug.Log(other.name);
         if (other.tag == "Player" || other.tag == "Gun") return;
         if (other.tag == "Enemy") Destroy(other.gameObject);
+        if (other.tag == "Target") Destroy(other.gameObject);
         Destroy(gameObject);
     }
 }
