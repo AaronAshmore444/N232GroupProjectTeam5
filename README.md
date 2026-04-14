@@ -4,7 +4,7 @@ Milestone 3:
 
 Contributions
 
-Aaron Ashmore - Worked on Player movement, camera, gun functionality, trap functionality and ui display, trap pickup, the door puzzle, and asisted teammates with Github issues!
+Aaron Ashmore - Worked on Player movement, camera, gun functionality, trap functionality and ui display, trap pickup, and the door puzzle!
 
 Emily Cabrera -
 
