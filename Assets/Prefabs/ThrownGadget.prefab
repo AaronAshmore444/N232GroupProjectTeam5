@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 320674378281406627}
   - component: {fileID: 8060262192350302878}
   - component: {fileID: 2236154802235256887}
-  - component: {fileID: 6147896686905811212}
   m_Layer: 0
   m_Name: Mirror
   m_TagString: Trap
@@ -142,19 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d46e542f377929f40a8eb8450c894206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6147896686905811212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 920268161331107528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86b25e8983a262647a7c595f8ad40cf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageAmount: 25
+  pickupTrapText: {fileID: 0}
 --- !u!1 &920268161331107854
 GameObject:
   m_ObjectHideFlags: 0

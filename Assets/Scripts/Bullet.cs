@@ -17,8 +17,15 @@ public class Bullet : MonoBehaviour
         Debug.Log(other.name);
 
         if (other.tag == "Player" || other.tag == "Gun") return;
-        if (other.tag == "Enemy") Destroy(other.gameObject);
-        if (other.tag == "Target") Destroy(other.gameObject);
+
+        // Apply damage if the object has HealthPoints
+        HealthPoints health = other.GetComponent<HealthPoints>();
+
+        if (health != null)
+        {
+            health.CurrentHealth -= damageAmount;
+        }
+
         Destroy(gameObject);
     }
 }
