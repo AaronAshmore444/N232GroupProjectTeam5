@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class BulletDamage : MonoBehaviour
 {
     public float speed = 20f;
     public float aliveTime = 3f;
-    public float damageAmount = 25f;
+    public float damageAmount = 25;
 
     void Start()
     {
@@ -17,7 +17,10 @@ public class Bullet : MonoBehaviour
         Debug.Log(other.name);
 
         if (other.tag == "Player" || other.tag == "Gun") return;
-        if (other.tag == "Enemy") Destroy(other.gameObject);
+        
         if (other.tag == "Target") Destroy(other.gameObject);
+        
+
+        Destroy(gameObject);
     }
 }
