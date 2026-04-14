@@ -8,7 +8,7 @@ Aaron Ashmore - Worked on Player movement, camera, gun functionality, trap funct
 
 Emily Cabrera -
 
-Abhinoor Singh - Did not communicate or contribute this Milestone
+Abhinoor Singh - Did not communicate or contribute this Milestone.
 
 DaRon Torrence -
 
@@ -22,7 +22,7 @@ Left Shift - sprint
 Left Click - Shoot stun gun
 F - Place trap and pickup trap
 
-
+We cut a few gadget ideas and the gadget upgrades, due to a member missing during this Milestone.
 
 
 
