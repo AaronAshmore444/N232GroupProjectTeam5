@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1121901467875578507}
   - component: {fileID: 2542561300046025959}
   - component: {fileID: 4666393953718649855}
-  - component: {fileID: 7532375451212346470}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Enemy
@@ -123,19 +122,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
---- !u!114 &7532375451212346470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3480659846517043156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 928f69b75daff28458fb46d719cdb124, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointsValue: 10
 --- !u!1 &4461386598201111597
 GameObject:
   m_ObjectHideFlags: 0
