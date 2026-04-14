@@ -11,6 +11,7 @@ TagManager:
   - Trap
   - Bullet
   - HealPickup
+  - Target
   layers:
   - Default
   - TransparentFX

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
@@ -8,6 +9,7 @@ public class EnemyMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        speed = 1;
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
@@ -21,11 +23,21 @@ public class EnemyMovement : MonoBehaviour
     {
         Debug.Log ("Trigger Hit: " + other.gameObject.tag);
 
-        if (other.CompareTag("Trap"))
-        {
-            Destroy(gameObject);
-        }
+        // if (other.CompareTag("Trap"))
+        // {
+        //     Destroy(gameObject);
+        // }
 
-        
+        if (other.CompareTag("Bullet"))
+        {
+            StartCoroutine(ChangeAfterDelay());
+        }
+    }
+
+    private IEnumerator ChangeAfterDelay()
+    {
+        speed = 0;
+        yield return new WaitForSeconds(1f);
+        speed = 1;
     }
 }
