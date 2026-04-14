@@ -13,7 +13,14 @@ Abhinoor Singh -
 DaRon Torrence -
 
 
+For Milestone 3, we have continued implementing features to complete our game as a Ghost Extermination Service. Our game is a first person experience where the player is armed with a ghost stun gun and spirit capture mirror. When the player shoots a ghost, the ghost becomes stunned and unable to move for a time. When the ghost hovers over the capture mirror, the player gets 10 points. When all of the ghosts become captured, your services are complete and you win the game. There are collectible coins scattered around the map. Inside the house, there is a door locked by two padlocks. In the other rooms of the house, there are hidden targets that, when destroyed, destroy one of the door locks. When both locks are destroyed, the door is destroyed. Behind the door, there are more collectable coins and an extra trap pickup to give the player a power boost. The player can only hold 1 trap at a time, so they will can position their traps to help them survive and catch ghosts efficiently. There are also health pickups around the map to heal the player if they get low life.
 
+Controls:
+wasd and arrow keys - movement
+spacebar - jump
+Left Shift - sprint
+Left Click - Shoot stun gun
+F - Place trap and pickup trap
 
 
 
