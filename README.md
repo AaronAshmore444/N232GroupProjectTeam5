@@ -1,5 +1,26 @@
 # N232GroupProjectTeam5
 
+Milestone 3:
+
+Contributions
+
+Aaron Ashmore -
+
+Emily Cabrera -
+
+Abhinoor Singh -
+
+DaRon Torrence -
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------
+
 Milestone 2:
 
 Contributions
