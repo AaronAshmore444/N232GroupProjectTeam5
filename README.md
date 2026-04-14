@@ -29,4 +29,4 @@ Emily Cabrera - Finish Level 1 Enviorment, Finish Scoring System
 
 DaRon Torrence - Enemy spawns and behavior(Enemies should not chase the player immediatly, and float around the map)
 
-Abhinoor Singh - Continue UI, Gadgets, Special mechanics such as hidden room or puzzle
+Abhinoor Singh - Continue UI, Gadgets, Special mechanics such as hidden room or puzzle 

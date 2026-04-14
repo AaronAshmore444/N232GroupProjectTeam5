@@ -5,6 +5,7 @@ public class HealthPoints : MonoBehaviour
     public float StartingHealth = 100f;
 
     public float CurrentHealth
+
     {
         get { return _HealthPoints; }
         set

@@ -2,90 +2,142 @@ using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class PlayerController : MonoBehaviour
 {
     //Player Movement Speed
-    public float moveSpeed = 5f; 
+    public float moveSpeed = 5f;
+    public float sprintSpeed = 10f;
+    
+    //Variable to control player jump
+    public float verticalVelocity = 0f;
     //Sets Player Jump force Variable
     public float jumpStrength = 5f;
-    //Sets Player Rigid Body variable
-    private Rigidbody rb;
+    //Get player Controller
+    public CharacterController controller;
+    //Set camera to transform
+    public Transform cameraTransform;
+
     //Bool to Check if on the ground
     public bool OnGround = true;
     //Bool to turn on player jump
     public bool doJump = false;
-    //Creates variable to choose smoothing
-    [SerializeField] private float smoothTime;
     //Spawnpoint for thrown Gadget
     public Transform throwPoint;
     //Force for thrown gadget
     [SerializeField] private float throwForce = 10f;
     //Gadget to Throw
     public GameObject gadgetToThrow;
+    //Bool to check if player has a gadget
+    public bool hasGadget;
+
+    
+    //Sets player current gadget
+    public GameObject currentGadget;
+    //Sets Text for trap pickup
+    public GameObject pickupTrapText;
+
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //Finds Player Rigid Body
-        rb = GetComponent<Rigidbody>();
+        //Set has gadget to True
+        hasGadget = true;
+        
     }
-// Update is called once per frame
+    // Update is called once per frame
     void Update()
-    {   
-        //Tells player if space is pressed then it is allowed to jump (For some reason this was inconsistent in Void FixedUpdate)
-        if (Input.GetKeyDown(KeyCode.Space))
+    {
+        //If on ground, player is grounded
+        OnGround = controller.isGrounded;
+        //Controls Player jump height and helps gravity
+        if (OnGround && verticalVelocity < 0)
         {
-            doJump = true;
+            verticalVelocity = -2f;
+        }
+        //Set player horizontal and vertical movement
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+        //Moves Player on X and Z
+        Vector3 movement = new Vector3(horizontal, 0, vertical);
+        movement = cameraTransform.TransformDirection(movement);
+        movement.y = 0;
+        movement = movement.normalized;
+        
+        float currentSpeed = moveSpeed;
+        // If press left shift and player is on ground, run at sprint speed
+        if (Input.GetKey(KeyCode.LeftShift) && OnGround)
+        {
+            currentSpeed = sprintSpeed;
         }
 
+        
+
+        
+
+        
+        //If player presses Space, Jump using jumpStrength
+        if (Input.GetKeyDown(KeyCode.Space) && OnGround)
+        {
+            verticalVelocity = jumpStrength;
+        }
+        //If palyer is not on ground, apply gravity
+        if (!OnGround)
+        {
+            verticalVelocity += Physics.gravity.y * Time.deltaTime;
+        }
+        //Sets all player movement, including on the Y axis
+        Vector3 allMovement = movement * currentSpeed;
+        allMovement.y = verticalVelocity;
+        controller.Move(allMovement * Time.deltaTime);
+        //If player presses R, reset scene
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        
+        // If F is pressed, player throws the Trap
+        if (Input.GetKeyDown(KeyCode.F)) {
+         
+            if (hasGadget)
+            {
+                ThrowGadget();
+            }
+            //If player presses F when in a collsion of a thrown trap, pickup the trap
+            if (currentGadget != null)
+            {
+               
+                
+                 Destroy(currentGadget);
+                currentGadget = null;
+
+                GameManager gameManager = FindObjectOfType<GameManager>();
+                if (gameManager != null)
+             {
+                gameManager.AddTrap(1);
+             }
+             
+        
+             pickupTrapText.SetActive(false);
+        
+
+                hasGadget = true;
+
+                
+                
+            }
 
     }
+
 
     
-    void FixedUpdate()
-    {
-        //Sets player horizontal and vertical variables
+
         
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-        
-        //Sets player Velocity and tell player to move in chosen axis direction
-        Vector3 move = new Vector3(h * moveSpeed, rb.linearVelocity.y, v * moveSpeed);
-
-        rb.linearVelocity = move;
-
-        //Checks if Space button was pressed and if player is on the ground plane, then applys upward force if so
-        if (doJump && OnGround)
-        {
-            rb.AddForce(Vector3.up *jumpStrength, ForceMode.Impulse);
-            doJump = false;
-        }
-        // Sets Player Rotation to pressed axis key
-        Vector3 spin = new Vector3(h, 0, v);
-
-        if (spin != Vector3.zero)
-       {
-            transform.rotation = Quaternion.LookRotation(spin * smoothTime);
-        }        
-        
-        // If Left Shift is pressed, player sprints at double speed
-        if (Input.GetKey(KeyCode.LeftShift) && OnGround)
-        {
-            rb.linearVelocity *= 2f;
-        }
-        // If F is pressed, player throws the Trap
-        if (Input.GetKeyDown(KeyCode.F) && gadgetToThrow != null)   {
-            ThrowGadget();
-    }
-
         
 
         //Code to spawn and throw the trap, then doesnt allow another to be thrown
-    void ThrowGadget()
+        void ThrowGadget()
         {
             GameObject thrownGadget = Instantiate(gadgetToThrow, throwPoint.position, throwPoint.rotation);
             Rigidbody rb = thrownGadget.GetComponent<Rigidbody>();
@@ -94,44 +146,55 @@ public class PlayerController : MonoBehaviour
             {
                 rb.AddForce(throwPoint.forward * throwForce, ForceMode.VelocityChange);
             }
+            GameManager gameManager = FindObjectOfType<GameManager>();
+            if (gameManager != null)
+            {
+                gameManager.LoseTrap(1);
+            }
 
-            gadgetToThrow = null;
+            hasGadget = false;
         }
+
+       
 
     }
 
     void OnCollisionEnter(Collision collision)
-    {   
-        
-        //If player is touching the ground plane, then enable jump
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            OnGround = true;
-        }
+    {
 
-         
+
+
         //If enemy touches player, player dies 
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            
+
             Destroy(gameObject);
             //SceneManager.LoadScene(2);
 
-            
+
         }
-    
+
         
-    
-    }
 
-    void OnCollisionExit(Collision collision)
+        
+
+    }
+    //If player touches traps, display pickup text
+    void OnTriggerEnter(Collider other)
     {
-        //If player is not touching the ground plane, then disable jump
-        if (collision.gameObject.CompareTag("Ground"))
+        if (other.CompareTag("Trap"))
         {
-            OnGround = false;
+            pickupTrapText.SetActive(true);
+        }
+    }
+    //If player leaves trap area, hide pickup text
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Trap"))
+        {
+            pickupTrapText.SetActive(false);
         }
     }
 
-    
+
 }
