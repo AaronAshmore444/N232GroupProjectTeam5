@@ -20,14 +20,20 @@ public class HealthPoints : MonoBehaviour
     }
 
     private float _HealthPoints;
-
+    public void TakeDamage(float amount)
+    {
+        CurrentHealth -= amount;
+        Debug.Log("Health: " + CurrentHealth);
+    }
     void Start()
     {
         CurrentHealth = StartingHealth;
+        
     }
 
     void Die()
     {
         Destroy(gameObject);
+        Debug.Log("Player Died");
     }
 }
