@@ -29,5 +29,15 @@ public class Enemy : MonoBehaviour
         }
         Destroy(gameObject);
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log ("Trigger Hit: " + other.gameObject.tag);
+
+        if (other.CompareTag("Trap"))
+        {
+            TakeDamage(1);
+        }
+    }
 }
 

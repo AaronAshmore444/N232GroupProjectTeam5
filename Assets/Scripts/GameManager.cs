@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     // Method to add points when an enemy is killed
     public void AddPoints(int points)
     {
+        Debug.Log("Add Points called with: " + points);
         ghostPoints += points;
         Debug.Log("Points: " + ghostPoints);
         pointText.text = "Points: " + ghostPoints;

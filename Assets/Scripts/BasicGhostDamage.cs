@@ -13,7 +13,7 @@ public class BasicGhostDamage : MonoBehaviour
             return;
 
         // Get the PlayerHealth component (use InParent in case of child colliders)
-        PlayerHealth playerHealth = other.GetComponentInParent<PlayerHealth>();
+        HealthPoints playerHealth = other.GetComponentInParent<HealthPoints>();
 
         if (playerHealth != null)
         {

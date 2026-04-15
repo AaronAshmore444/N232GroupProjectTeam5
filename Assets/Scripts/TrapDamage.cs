@@ -14,8 +14,8 @@ public class TrapDamage : MonoBehaviour
         if (other.tag == "Player" || other.tag == "Gun") return;
 
         // Apply damage if the object has HealthPoints
-        HealthPoints health = other.GetComponent<HealthPoints>();
-        Enemy enemy = other.GetComponent<Enemy>();
+        
+        Enemy enemy = other.GetComponentInParent<Enemy>();
         if (enemy != null) enemy.TakeDamage(damageAmount);
         
 

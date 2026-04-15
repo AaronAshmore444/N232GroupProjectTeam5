@@ -25,7 +25,7 @@ public class EnemyMovement : MonoBehaviour
 
         if (other.CompareTag("Trap"))
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
 
         if (other.CompareTag("Bullet"))

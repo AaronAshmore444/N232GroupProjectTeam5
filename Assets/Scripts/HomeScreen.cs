@@ -6,7 +6,7 @@ public class HomeScreen : MonoBehaviour
     public void OnPlayClick()
     {
         Debug.Log("Play");
-        SceneManager.LoadScene("Play Screen");
+        SceneManager.LoadScene("Level 1");
     }
 
     public void OnOptionsClick()
