@@ -6,14 +6,16 @@ Contributions
 
 Aaron Ashmore - Worked on Player movement, camera, gun functionality, trap functionality and ui display, trap pickup, and the door puzzle!
 
-Emily Cabrera -
+Emily Cabrera - Score, coins, healing pickups, level design.
 
 Abhinoor Singh - Did not communicate or contribute this Milestone.
 
-DaRon Torrence -
+DaRon Torrence - Enemies, enemy spawners, damage.
 
 
 For Milestone 3, we have continued implementing features to complete our game as a Ghost Extermination Service. Our game is a first person experience where the player is armed with a ghost stun gun and spirit capture mirror. When the player shoots a ghost, the ghost becomes stunned and unable to move for a time. When the ghost hovers over the capture mirror, the player gets 10 points. When all of the ghosts become captured, your services are complete and you win the game. There are collectible coins scattered around the map. Inside the house, there is a door locked by two padlocks. In the other rooms of the house, there are hidden targets that, when destroyed, destroy one of the door locks. When both locks are destroyed, the door is destroyed. Behind the door, there are more collectable coins and an extra trap pickup to give the player a power boost. The player can only hold 1 trap at a time, so they will can position their traps to help them survive and catch ghosts efficiently. There are also health pickups around the map to heal the player if they get low life.
+
+When launching the Homescreen scene, the player is taken to a start menu. When pressing the start button, the player is loaded into level 1.
 
 Controls:
 wasd and arrow keys - movement
@@ -23,6 +25,10 @@ Left Click - Shoot stun gun
 F - Place trap and pickup trap
 
 We cut a few gadget ideas and the gadget upgrades, due to a member missing during this Milestone.
+
+We had a few more features working such as spawners and the player taking damage, but a merge conflict caused us to lose a bunch of progress and we could not recover before submission. For final, we plan to fix these listed issues, and include a player losing due to health being reduced to 0, and the player winning by exterminating all of the ghosts. Another idea that has already been completed once, but needs reimplented due to a merge conflict is the extra trap pickup.
+
+We also plan to include 1 more type of ghost along with polishing.
 
 
 
