@@ -3,30 +3,14 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
 
     //Variable for trap text
     public TMP_Text trapText;
-     public TMP_Text pointText;
+    public TMP_Text pointText;
     //Variable to track number of traps held
     public int trapNum;
     // Tracks player points
     public int ghostPoints = 0;
-
-    public float PlayerMouseSensitivity = 240f;
-
-    void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject); // Keeps this object alive
-        }
-        else
-        {
-            Destroy(gameObject); // Prevents duplicates when reloading
-        }
-    }
 
     void Start()
     {
