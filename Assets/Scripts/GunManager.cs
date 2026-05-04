@@ -24,7 +24,7 @@ public class GunManager : MonoBehaviour
             Shoot();
         }
     }
-
+// Method to shoot a bullet
     void Shoot()
     {
         Instantiate(bullet, firePoint.position, firePoint.rotation);

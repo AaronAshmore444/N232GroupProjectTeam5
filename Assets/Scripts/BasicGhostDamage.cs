@@ -1,33 +1,27 @@
 using UnityEngine;
 
-public class BasicGhostDamage : MonoBehaviour
+public class BasicGhostDamage : MonoBehaviour //
 {
-    public int damageAmount = 10;
-    public float damageCooldown = 1f;
-    private float lastDamageTime = 0f;
+    public int damageAmount = 3; // Amount of damage the ghost will deal to the player
+    public float damageCooldown = 1.5f; // Cooldown time in seconds between damage applications
 
-    private void OnTriggerStay(Collider other)
+    private static float globalLastDamageTime = 0f; // Static variable to track the last time any ghost dealt damage
+
+    private void OnTriggerStay(Collider other) // Use OnTriggerStay to continuously check for damage
     {
-        // Only proceed if the object is the player
-        if (!other.CompareTag("Player"))
+        if (!other.CompareTag("Player")) // Only damage the player
             return;
 
-        // Get the PlayerHealth component (use InParent in case of child colliders)
-        HealthPoints playerHealth = other.GetComponentInParent<HealthPoints>();
+        if (Time.time < globalLastDamageTime + damageCooldown) // Check if cooldown has passed
+            return;
 
-        if (playerHealth != null)
+        PlayerHealth playerHealth = other.GetComponentInParent<PlayerHealth>(); // Get PlayerHealth from parent to ensure we get the correct component
+
+        if (playerHealth != null) // If the player has a PlayerHealth component, apply damage
         {
-            // Apply damage with a cooldown
-            if (Time.time >= lastDamageTime + damageCooldown)
-            {
-                playerHealth.TakeDamage(damageAmount);
-                Debug.Log("Player took damage: " + damageAmount);
-                lastDamageTime = Time.time;
-            }
-        }
-        else
-        {
-            Debug.LogWarning("PlayerHealth component not found on the player.");
+            playerHealth.TakeDamage(damageAmount); //  Apply damage to the player
+            Debug.Log("Player took damage from: " + gameObject.name); // Log the damage event with the name of the ghost
+            globalLastDamageTime = Time.time; // Update the global last damage time to enforce cooldown across all ghosts
         }
     }
 }

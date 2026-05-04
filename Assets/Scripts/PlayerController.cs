@@ -114,8 +114,7 @@ public class PlayerController : MonoBehaviour
                 
                  Destroy(currentGadget);
                 currentGadget = null;
-
-                GameManager gameManager = FindObjectOfType<GameManager>();
+                GameManager gameManager = Object.FindFirstObjectByType<GameManager>();
                 if (gameManager != null)
              {
                 gameManager.AddTrap(1);
@@ -149,7 +148,7 @@ public class PlayerController : MonoBehaviour
             {
                 rb.AddForce(throwPoint.forward * throwForce, ForceMode.VelocityChange);
             }
-            GameManager gameManager = FindObjectOfType<GameManager>();
+            GameManager gameManager = Object.FindFirstObjectByType<GameManager>();
             if (gameManager != null)
             {
                 gameManager.LoseTrap(1);
