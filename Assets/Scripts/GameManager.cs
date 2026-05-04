@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     // Tracks player points
     public int ghostPoints = 0;
 
+    public TMP_Text BulletsText;
+    public GunManager GunManager;
+
     void Start()
     {
         //set trap number to 1 and updates trap text
@@ -19,6 +22,14 @@ public class GameManager : MonoBehaviour
         trapText.text = "Traps: (" + trapNum + "/1)";
         ghostPoints = 0;
         pointText.text = "Points: " + ghostPoints;
+
+        UpdateBulletsText();
+    }
+
+    public void UpdateBulletsText()
+    {
+        BulletsText.text = "Bullets: " + GunManager.TotalBullets.ToString();
+
     }
 
     // Method to add points when an enemy is killed

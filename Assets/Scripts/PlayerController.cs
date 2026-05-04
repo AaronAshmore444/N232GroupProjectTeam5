@@ -37,6 +37,9 @@ public class PlayerController : MonoBehaviour
     //Sets Text for trap pickup
     public GameObject pickupTrapText;
 
+    public GunManager GunManager;
+    public GameManager GameManager;
+
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -163,7 +166,6 @@ public class PlayerController : MonoBehaviour
     {
 
 
-
         //If enemy touches player, player dies 
         if (collision.gameObject.CompareTag("Enemy"))
         {
@@ -174,10 +176,6 @@ public class PlayerController : MonoBehaviour
 
         }
 
-        
-
-        
-
     }
     //If player touches traps, display pickup text
     void OnTriggerEnter(Collider other)
@@ -185,6 +183,14 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Trap"))
         {
             pickupTrapText.SetActive(true);
+        }
+
+        if (other.gameObject.CompareTag("Ammo Box"))
+        {
+            Debug.Log("Ammo box collision");
+            GunManager.TotalBullets += 15;
+            GameManager.UpdateBulletsText();
+            Destroy(other.gameObject);
         }
     }
     //If player leaves trap area, hide pickup text

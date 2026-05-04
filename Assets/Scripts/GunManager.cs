@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GunManager : MonoBehaviour
 {
 
     public GameObject bullet;
+    public int TotalBullets = 10;
+    public UnityEvent OnShoot;
     private Transform firePoint;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,7 +19,7 @@ public class GunManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && TotalBullets > 0)
         {
             Shoot();
         }
@@ -24,5 +28,7 @@ public class GunManager : MonoBehaviour
     void Shoot()
     {
         Instantiate(bullet, firePoint.position, firePoint.rotation);
+        TotalBullets--;
+        OnShoot?.Invoke();
     }
 }
