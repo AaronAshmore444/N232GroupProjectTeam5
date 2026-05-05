@@ -10,7 +10,7 @@ public class CameraFollow : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        cameraRotationSpeed = GameSettings.Instance.PlayerMouseSensitivity;
+        //cameraRotationSpeed = GameSettings.Instance.PlayerMouseSensitivity;
     }
     
     // Update is called once per frame
@@ -20,8 +20,8 @@ public class CameraFollow : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
         //Sets mouse rotation X and Y to camera Rotate Speed Variable
-        float rotationY = mouseX * GameSettings.Instance.PlayerMouseSensitivity * Time.deltaTime;
-        float rotationX = - mouseY * GameSettings.Instance.PlayerMouseSensitivity * Time.deltaTime;
+        float rotationY = mouseX * cameraRotationSpeed * Time.deltaTime;
+        float rotationX = - mouseY * cameraRotationSpeed * Time.deltaTime;
         //Sets new rotation from rotation X and Y
         float newRotationY = transform.localEulerAngles.y + rotationY;
         float newRotationX = transform.localEulerAngles.x + rotationX;

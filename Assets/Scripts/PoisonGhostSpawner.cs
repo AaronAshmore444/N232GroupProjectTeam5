@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class Spawner : MonoBehaviour
+public class PoisonGhostSpawner : MonoBehaviour
 {
-public GameObject GhostPrefab;
+    public GameObject GhostPrefab;
 // Time interval between spawns
 public float spawnInterval = 2f;
 // Timer to track time since last spawn
@@ -18,7 +18,7 @@ public float spawnRadius = 5f;
 // Update is called once per frame
 void Update()
 {
-    int currentEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
+    int currentEnemies = GameObject.FindGameObjectsWithTag("PoisonEnemy").Length;
 
     if (currentEnemies >= maxEnemies) // Check if we've reached the maximum number of enemies
         return;
@@ -32,17 +32,15 @@ if (timer >= spawnInterval)
     Random.Range(-spawnRadius, spawnRadius)
 );
 // Instantiate the ghost at a random position around the spawner
-    
-    if (enemiesSpawned < 30) {
-         Instantiate(GhostPrefab, transform.position + offset, Quaternion.identity); 
+    Instantiate(GhostPrefab, transform.position + offset, Quaternion.identity); 
     
     enemiesSpawned++;
-    timer = 0;
-    }
+    
 }
 }
 
 }
+
 
 
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6778765766891173444}
   m_Layer: 0
   m_Name: PoisonGhost
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,7 +51,7 @@ GameObject:
   - component: {fileID: 3673722492234391791}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Enemy
+  m_TagString: PoisonEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

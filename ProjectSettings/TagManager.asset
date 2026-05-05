@@ -12,6 +12,7 @@ TagManager:
   - Bullet
   - HealPickup
   - Ammo Box
+  - PoisonEnemy
   layers:
   - Default
   - TransparentFX

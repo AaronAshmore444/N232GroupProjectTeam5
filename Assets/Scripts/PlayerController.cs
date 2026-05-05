@@ -156,24 +156,31 @@ public class PlayerController : MonoBehaviour
 
             hasGadget = false;
         }
+    }
 
-       
+    public void SetGadget(bool value)
+    {
+        hasGadget = value;
+    }
 
+    public bool GetGadget()
+    {
+        return hasGadget;
     }
 
     void OnCollisionEnter(Collision collision)
     {
 
 
-        //If enemy touches player, player dies 
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
+        // //If enemy touches player, player dies 
+        // if (collision.gameObject.CompareTag("Enemy"))
+        // {
 
-            Destroy(gameObject);
-            //SceneManager.LoadScene(2);
+        //     Destroy(gameObject);
+        //     //SceneManager.LoadScene(2);
 
 
-        }
+        // }
 
     }
     //If player touches traps, display pickup text

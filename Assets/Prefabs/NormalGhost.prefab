@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7725801405209410121}
   m_Layer: 0
   m_Name: NormalGhost
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +102,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 33279a08e1059534c9b5e0e9ab23ea97, type: 2}
+  - {fileID: 2100000, guid: 68c44a327967b444884e8abd021724e3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -157,8 +157,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6686e6ea837a55499733d8b0e050bc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalMaterial: {fileID: 2100000, guid: 33279a08e1059534c9b5e0e9ab23ea97, type: 2}
-  transparentMaterial: {fileID: 2100000, guid: f94b51ba5bdfb434796c3fe8cf594dc5, type: 2}
+  normalMaterial: {fileID: 2100000, guid: 68c44a327967b444884e8abd021724e3, type: 2}
+  transparentMaterial: {fileID: 2100000, guid: 233050a38bd5b8d4b9a5e2cad200ebe0, type: 2}
   isStunned: 0
   speed: 20
 --- !u!114 &5926225464466378581

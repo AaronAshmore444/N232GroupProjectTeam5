@@ -14,4 +14,9 @@ public class HomeScreen : MonoBehaviour
         Debug.Log("Options");
         SceneManager.LoadScene("Options Screen");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

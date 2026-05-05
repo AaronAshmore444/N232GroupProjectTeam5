@@ -15,7 +15,7 @@ public class BasicGhostDamage : MonoBehaviour //
         if (Time.time < globalLastDamageTime + damageCooldown) // Check if cooldown has passed
             return;
 
-        PlayerHealth playerHealth = other.GetComponentInParent<PlayerHealth>(); // Get PlayerHealth from parent to ensure we get the correct component
+        PlayerHealth playerHealth = other.GetComponent<PlayerHealth>(); // Get PlayerHealth from parent to ensure we get the correct component
 
         if (playerHealth != null) // If the player has a PlayerHealth component, apply damage
         {

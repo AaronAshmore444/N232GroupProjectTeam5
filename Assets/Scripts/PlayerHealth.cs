@@ -49,6 +49,8 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    
+
     // Method to take damage
     public void TakeDamage(int amount)
     {
