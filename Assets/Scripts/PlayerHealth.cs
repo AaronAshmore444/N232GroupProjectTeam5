@@ -62,7 +62,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Die();
+            
         }
     }
     // Method to apply poison effect
@@ -101,11 +101,5 @@ public class PlayerHealth : MonoBehaviour
     }
 
     // Handle player death
-    private void Die()
-    {
-
-        Debug.Log("Player has died!");
-        gameObject.SetActive(false);
-        // Add death logic here (respawn, game over, etc.)
-    }
+    
 }

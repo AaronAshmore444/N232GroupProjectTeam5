@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class GameManager : MonoBehaviour
 
     public TMP_Text BulletsText;
     public GunManager GunManager;
+
+    [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private GameObject winningPanel;
+    [SerializeField] private PlayerHealth playerHealth;
+    [SerializeField] private GameObject restartButton;
 
     void Start()
     {
@@ -53,6 +59,38 @@ public class GameManager : MonoBehaviour
     {
         trapNum -= traps;
         trapText.text = "Traps: (" + trapNum + "/1)";
+    }
+
+    public void Update()
+    {
+
+        if (playerHealth.currentHealth <= 0)
+        {
+            if (gameOverPanel != null) gameOverPanel.SetActive(true);
+            if (restartButton != null) restartButton.SetActive(true);
+            Time.timeScale = 0f;
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        } else
+        {
+            if (ghostPoints >= 300)
+        {
+            if (winningPanel != null) winningPanel.SetActive(true);
+            if (restartButton != null) restartButton.SetActive(true);
+            Time.timeScale = 0f;
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        }
+        
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 

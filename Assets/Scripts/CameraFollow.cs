@@ -6,11 +6,7 @@ public class CameraFollow : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //On game start, the cursor is locked and hidden
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-
-        //cameraRotationSpeed = GameSettings.Instance.PlayerMouseSensitivity;
+        
     }
     
     // Update is called once per frame

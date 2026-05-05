@@ -31,7 +31,7 @@ public class GameSettings : MonoBehaviour
             Cursor.visible = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             SceneManager.LoadScene("Options Screen");
             Cursor.lockState = CursorLockMode.None;
