@@ -19,7 +19,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private GameObject winningPanel;
     [SerializeField] private PlayerHealth playerHealth;
-    [SerializeField] private GameObject restartButton;
+    [SerializeField] private GameObject gotoMainMenuButton;
+    
 
     void Start()
     {
@@ -67,7 +68,7 @@ public class GameManager : MonoBehaviour
         if (playerHealth.currentHealth <= 0)
         {
             if (gameOverPanel != null) gameOverPanel.SetActive(true);
-            if (restartButton != null) restartButton.SetActive(true);
+            if (gotoMainMenuButton != null) gotoMainMenuButton.SetActive(true);
             Time.timeScale = 0f;
 
             Cursor.lockState = CursorLockMode.None;
@@ -77,7 +78,7 @@ public class GameManager : MonoBehaviour
             if (ghostPoints >= 300)
         {
             if (winningPanel != null) winningPanel.SetActive(true);
-            if (restartButton != null) restartButton.SetActive(true);
+            if (gotoMainMenuButton != null) gotoMainMenuButton.SetActive(true);
             Time.timeScale = 0f;
 
             Cursor.lockState = CursorLockMode.None;
@@ -87,10 +88,18 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void RestartGame()
+    public void GoToMainMenu()
     {
+        if (winningPanel != null) winningPanel.SetActive(false);
+        if (gameOverPanel != null) gameOverPanel.SetActive(false);
+        if (gotoMainMenuButton != null) gotoMainMenuButton.SetActive(false);
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("HomeScreen");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
 
