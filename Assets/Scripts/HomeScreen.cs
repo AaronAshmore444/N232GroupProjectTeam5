@@ -5,6 +5,7 @@ public class HomeScreen : MonoBehaviour
 {
     public void OnPlayClick()
     {
+        Time.timeScale = 1f;
         Debug.Log("Play");
         SceneManager.LoadScene("Level 1");
     }

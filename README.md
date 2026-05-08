@@ -1,5 +1,62 @@
 # N232GroupProjectTeam5
 
+Aaron Ashmore, Emily Cabrera, DaRon Torrence, Abhinoor Singh 
+
+N232 
+
+4/28/26 
+
+Group Milestone 4 Post Mortem: 
+
+GitHub - https://github.com/AaronAshmore444/N232GroupProjectTeam5
+
+
+Controls:
+wasd and arrow keys - movement
+spacebar - jump
+Left Shift - sprint
+Left Click - Shoot stun gun
+F - Place trap and pickup trap
+Escape - Pause Menu
+
+
+Contributions - 
+
+Aaron Ashmore: Balance, bug fixing, compiles team changes, trap pickup, audio
+
+Emily Cabrera: Building the set, creating the coin/health collection, invisible walls around the map 
+
+DaRon Torrence: Building the enemy, creating a poison projectile system for ranged enemies, with spawners around the map. 
+
+Abhinoor Singh: Designed and implemented the gun, bullet and ammo box, the homescreen UI and all its logic as well as the options screen (with shortcuts for both) 
+
+ 
+
+What was learned and what would be done differently - 
+
+Aaron Ashmore: I learned how to attempt to be a leader. I learned how to create a pickup that has a maximum of one allowed in your inventory.  I also learned how to make an object interact with other objects around the map. I would try to be a little less stressed during the group project. I would also go about doing the player controller differently. It feels like there are a few too many things in a single script. 
+
+Emily Cabrera: I learned how to make a proper health pickup, considering I have been looking for methods and scripts that would work, and on my own for that matter. Not to mention I also learned how to make invisible walls; I did not think they would be so easy though since making invisible in other game programs like Unreal Engine is a bit different. If I had more time to do things differently, I would’ve done more research on how to make a better pickup or an easier way. 
+
+DaRon Torrence: I learned The importance of pushing and pulling before working, I've learned now to always be sure to pull origin before working to avoid conflict.  This helped me understand how important it is to stay updated with my teams work and keep everything synced. It also showed me that pushing changes regularly is just as important for smooth collaboration. 
+
+Abhinoor Singh: 
+
+ 
+
+Challenge I faced - 
+
+Aaron Ashmore: I struggled with not having to rush through this project to be able to keep up with other projects. Each week I feel that I was only able to do the bare minimum or else I would fall behind. I also struggled with giving team updates on the day that they were needed. I was always a day or two later than i wanted to be. 
+
+Emily Cabrera:  I mainly struggled with the enemy point system, while it did present if you killed an enemy in the console, it didn’t show up in the actual scoring I made. 
+
+DaRon Torrence: I mainly struggled with debugging collision and trigger issues, merging conflicts, and fixing projectile behavior. I also struggled using github, costing the lost progress last milestone due to an improper push/pull on my end. 
+
+Abhinoor Singh: 
+
+
+-------------------------------------------------------------------------------------------------------------------
+
 Milestone 3:
 
 Contributions
